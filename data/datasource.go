@@ -56,6 +56,7 @@ func init() {
 	addSourceReader("consul+https", readConsul)
 	addSourceReader("boltdb", readBoltDB)
 	addSourceReader("aws+smp", readAWSSMP)
+	addSourceReader("env", readEnv)
 }
 
 var sourceReaders map[string]func(*Source, ...string) ([]byte, error)
